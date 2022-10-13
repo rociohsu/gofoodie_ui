@@ -606,7 +606,10 @@ i.icon-pickup { display: inline-block; width: 30px; height: 20px; margin-right: 
 i.icon-pickup::before { display: none; }
 
 /* 置底圖 */
-.notify_fixed { position: sticky; bottom: 65px; left: 0; background: @color-line; }
+.notify_fixed { position: sticky; bottom: 65px; left: 0; background: @color-line; z-index: 4; }
+.notify_fixed.ad_bottom0 { bottom: 0; }
+.notify_fixed.ad_bottom0 .pc { display: none; }
+.notify_fixed.ad_bottom0 .mobile { display: block; }
 .notify_fixed.member_push { background: @color-self; }
 footer .notify_fixed { position: relative; bottom: 0; }
 .notify_fixed img { width: 100%; height: auto; }
@@ -985,7 +988,10 @@ footer .notify_fixed { position: relative; bottom: 0; }
     
     /* 置底圖 */
     .notify_fixed { bottom: 70px; }
-	.notify_fixed img { display: block; width: auto; height: 80px; margin: 0 auto; }
+	.notify_fixed:not(.ad_bottom0) img { display: block; width: auto; height: 80px; margin: 0 auto; }
+	.notify_fixed.ad_bottom0 { bottom: 0; background: none; }
+	.notify_fixed.ad_bottom0 .pc { display: block; }
+	.notify_fixed.ad_bottom0 .mobile { display: none; }
 	
 	/* 推播通知 */
 	.pushlist .group .headpic { width: 51px; height: 51px; margin-right: 19px; line-height: 51px; }
