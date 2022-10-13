@@ -1,0 +1,89 @@
+
+<html lang="zh-Hant">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,shrink-to-fit=no">
+<meta http-equiv="content-language" content="zh-Hant-TW">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+
+<title>GoFoodie 美食快一點! 辦公室美食外送</title>
+<meta name="keywords" content="GoFoodie 美食快一點! 辦公室美食外送">
+<meta name="description" content="GoFoodie 美食快一點! 辦公室美食外送">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/standard.css">
+<link rel="stylesheet" href="css/theme_default.css">
+</head>
+
+<body>
+	
+<header class="no_logo"><!-- 無logo時，加class="no_logo" -->
+	<div class="top_bar flex_center">
+        <div class="shop_name"><a href="#">快一點食堂</a></div>
+
+        <!-- 未登入狀態顯示 -->
+        <div class="open_menu" style="display: none;"><a href="login"><i class="icon-user"></i></a></div>
+
+        <!-- 已登入狀態顯示 -->
+        <div class="open_menu" onclick="$('.menu_user').fadeIn(300);"><i class="icon-user-check"></i></div>	
+    </div>
+    
+    <div class="menu_user">
+        <div class="overlay_bg" onclick="$(this).closest('.menu_user').fadeOut(100);"></div>
+        <div class="menu_title">
+            <div class="user_name"><i class="icon-user-check"></i> Hi, 訪客</div>
+            <button class="close" ref="categoryList" onclick="$(this).closest('.menu_user').fadeOut(100);"><i class="icon-close"></i></button>
+        </div>
+        <div class="menu_list">
+            <a href="#"><i class="icon-food"></i> 點餐</a>
+            <a href="web_userdata.html"><i class="icon-user-edit"></i> 會員資料</a>
+            <a href="web_order.html"><i class="icon-file"></i> 訂單查詢</a>
+            <a href="#"><i class="icon-sign-out"></i> 登出</a>
+        </div>
+    </div>
+	
+	<div class="titlebar">
+		<div class="container">
+			<a href="web_userdata.html"><i class="icon-arrow-left"></i></a> 變更手機號碼
+		</div>
+	</div>
+</header>
+
+<main>
+	<div class="userdata_edit container">
+		<form action="web_userdata.html">
+			<div class="limit_num"><i>10</i>/10</div>
+			<div class="text_box">
+				<input class="country_code" type="tel" maxlength="4" value="+886" disabled>
+				<input class="number" type="tel" maxlength="10" value="0988123456">
+				<button type="button"><i class="icon-delete"></i></button>
+			</div>
+            
+            <button type="button" class="send">發送簡訊認證</button>
+            <button type="button" class="sent hide">已發送簡訊</button>
+            <button type="button" class="send hide">重新發送簡訊</button>
+            
+            <div class="verify">
+                <p class="attetion">發送簡訊需要一點時間，請您稍等片刻<br>若超過10分鐘尚未收到簡訊，請再重新發送一次</p>
+                <div class="limit_num"><i>0</i>/6</div>
+                <div class="text_box">
+                    <input class="verify_code" type="tel" maxlength="5" value="手機驗證碼" disabled>
+                    <input class="number" type="tel" maxlength="6" value="">
+                    <button type="button"><i class="icon-delete"></i></button>
+                </div>
+                <button type="submit" class="save">儲存</button>
+            </div>	
+		</form>
+	</div>
+
+</main>
+
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-migrate-3.1.0.min.js"></script>
+<script src="js/jquery.modal.min.js"></script>
+<script src="js/layout.js"></script>
+</body>
+</html>

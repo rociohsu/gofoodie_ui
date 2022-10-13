@@ -1,0 +1,149 @@
+
+<html lang="zh-Hant">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,shrink-to-fit=no">
+<meta http-equiv="content-language" content="zh-Hant-TW">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+
+<title>GoFoodie 美食快一點! 辦公室美食外送</title>
+<meta name="keywords" content="GoFoodie 美食快一點! 辦公室美食外送">
+<meta name="description" content="GoFoodie 美食快一點! 辦公室美食外送">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/standard.css">
+<link rel="stylesheet" href="css/theme_default.css">
+</head>
+
+<body>
+	
+<header class="no_logo"><!-- 無logo時，加class="no_logo" -->
+	<div class="titlebar">
+		<div class="container">
+			<a href="javascript:history.back();"><i class="icon-arrow-left"></i></a> 訂單查詢
+		</div>
+	</div>
+</header>
+
+<main>    
+	<div class="storelist image_s order container flex_top flex_wrap">
+
+		<!-- 已開團，一起點進行中
+		<a class="flex_center flex_wrap" href="groupbuy_order_detail_join.html">
+			<div class="pick_number none">一起點<br>進行中</div>
+			<div class="info">
+				<div class="name">益頂味肉品專門店</div>		
+				<div class="order">團訂編號 000012345<br>開團時間 2020-01-03 12:00</div>
+			</div>
+			<div class="focus">
+				<button onclick="window.open('#')">前往下單</button>
+			</div>
+            <div class="iconbar">
+				<div class="groupbuy">
+					<i class="icon-groupbuy"></i>揪團一起點
+				</div>
+            </div>
+		</a> -->
+
+		<!-- 團長已收單，下單截止
+		<a class="flex_center flex_wrap" href="groupbuy_order_detail_off.html">
+			<div class="pick_number none">一起點<br>已截止</div>
+			<div class="info">
+				<div class="name">益頂味肉品專門店</div>		
+				<div class="order">團訂編號 000012345<br>開團時間 2020-01-03 12:00</div>
+			</div>
+			<div class="focus">
+				<div class="price">$<b>1,250</b></div>
+				<div class="kcal">1000kcal</div>
+				<div class="status waiting">等待付款</div>
+			</div>
+            <div class="iconbar">
+				<div class="groupbuy">
+					<i class="icon-groupbuy"></i>揪團一起點
+				</div>
+				<div class="pick">
+					<i class="icon_self">自</i>
+				</div>
+            </div>
+		</a> -->
+		
+		<!-- 未完成線上付款時 -->
+		<a class="flex_center flex_wrap" href="groupbuy_order_detail.html">
+			<div class="pick_number none">訂單<br>尚未成立</div><!-- 訂單未成立加 class="none" -->
+			<div class="info">
+				<div class="name">益頂味肉品專門店</div>		
+				<div class="order">團訂編號 000012345<br>付款完成後將成立訂單</div>
+			</div>
+			<div class="focus">
+				<div class="price">$<b>1,250</b></div>
+				<div class="kcal">1000kcal</div>
+				<div class="status waiting">等待付款</div>
+
+				<!-- 因為付款要可以再選擇線上付款或現場付款，所以這邊不放前往付款的button，只留等待付款的狀態，引導到訂單明細頁再付款 -->
+				<button onclick="window.open('#')" style="display: none;">線上付款</button><!-- 失效後class="disabled" -->
+				<button onclick="window.open('#')" style="display: none;">現場付款</button>
+			</div>
+            <div class="iconbar">
+				<div class="groupbuy">
+					<i class="icon-groupbuy"></i>揪團一起點
+				</div>
+				<div class="pick">
+					<i class="icon_self">自</i>
+				</div>
+            </div>
+		</a>
+		
+		<!-- 已完成線上付款或選擇現場付款時 -->
+		<a class="flex_center flex_wrap" href="groupbuy_order_detail_finished.html">
+			<div class="pick_number">取餐編號<b>1</b></div><!-- 有4種圓圈底色 -->
+			<!-- <div class="pick_number self">取餐編號<b>1</b></div>
+			<div class="pick_number inside">取餐編號<b>1</b></div>
+			<div class="pick_number freight">宅配</div> -->
+			<div class="info">
+				<div class="name">快一點麵食店</div>		
+				<div class="order">團訂編號 000012345<br>取餐時間 2020-01-03 12:00</div>
+			</div>
+			<div class="focus">
+				<div class="price">$<b>200</b></div>
+				<div class="kcal">1000kcal</div>
+				<div class="status finished">已接單</div>
+			</div>
+            <div class="iconbar">
+				<div class="groupbuy">
+					<i class="icon-groupbuy"></i>揪團一起點
+				</div>
+				<div class="pick">
+					<i class="icon_delivery">送</i>
+					<!-- <i class="icon_self">自</i>
+					<i class="icon_inside">內</i> -->
+				</div>
+				<div class="pay">
+					<i class="icon_linepay"></i>
+					<!-- <i class="icon_googlepay"></i>
+					<i class="icon_applepay"></i>
+					<i class="icon_creditcard"></i>
+					<i class="icon_cash"></i> -->
+				</div>
+            </div>
+		</a>
+        
+	</div><!-- END .storelist.image_s.order -->
+</main>
+
+<footer>
+	<div class="bottom_navigation flex_center">
+		<div class="container flex_center">
+			<a class="current" href="groupbuy_order.html"><i class="icon-order"></i>訂單</a>
+			<a href="setting.html"><i class="icon-setting"></i>設定</a>
+		</div>
+	</div>
+</footer>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-migrate-3.1.0.min.js"></script>
+<script src="js/jquery.modal.min.js"></script>
+<script src="js/layout.js"></script>
+</body>
+</html>

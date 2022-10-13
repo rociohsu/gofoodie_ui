@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+// color
+@color-cisbase: #519FF8;
+@color-cisother: #76B566;
+@color-dark: #408ff0;
+@color-lighter: #F3FBFF;
+@color-lightist: #F3F3F3;
+
+/* 頁首 */
+nav.tabs.store a.current { color: @color-cisbase; }
+nav.tabs.store a.current::after { background: @color-cisbase; }
+nav.tabs.order a.current { color: @color-cisother; }
+nav.tabs.order a.current::after { background: @color-cisother; }
+
+/* 自動搜尋地址及定位 */
+.autocomplete > div > p.label { color: @color-cisother; }
+.autocomplete > div > p.label::before { background: @color-cisother; }
+.autocomplete.gps_click > div > p.label { color: @color-cisbase; }
+.autocomplete.gps_click > div > p.label::before { background: @color-cisbase; }
+
+/* 頁尾 */
+.bottom_navigation { background: @color-cisbase; }
+.bottom_navigation a { color: @color-lightist; }
+.bottom_navigation a i::before { color: @color-lightist; }
+.bottom_navigation a.current { background: @color-dark; }
+
+/* banner */
+.banner .owl-dots .owl-dot.active span, .banner .owl-dots .owl-dot:hover span { background: @color-cisbase; }
+
+/* 大圖列表 */
+.storelist > a .cover time { background: @color-cisbase; }
+
+/* 店家資訊 */
+.storeinfo .cover time { background: @color-cisbase; }
+.hot_sale .item .rank { background: @color-cisbase; }
+.order_btn > a { color: @color-dark; border-color: @color-dark; }
+
+/* 訂單狀態 */
+.order_status > span.active { color: @color-cisbase; }
+.order_status > span.active::after { background: @color-cisbase; }
+.order_status.end:not(.cancel) { color: @color-cisbase; }
+.order_status.end:not(.cancel)::before { background: @color-cisbase; }
+
+/* 推播通知 */
+.pushlist .group .headpic { background: @color-cisbase; }
+
+/* login logs */
+table { min-width: 738px; margin: 20px auto;
+    thead th { padding: 10px 5px; color: @color-cisbase; border-bottom: 2px solid @color-cisbase; }
+    tbody td { padding: 10px 5px; text-align: center; 
+        .column_name { display: none; color: @color-cisbase; }
+    }
+    tbody tr:nth-child(even) th, tbody tr:nth-child(even) td { background: @color-lighter; }
+}
+
+/* mobile */
+@media (max-width: 640px) {
+    table { min-width: 100%; font-size: 14px;
+        thead { display: none; }
+        tbody {
+            td { display: flex; flex-flow: wrap; justify-content: space-between; align-items: center; width: 100%; padding: 5px 15px;
+                .column_name { display: block; }
+            }
+            tr td:first-child { padding-top: 20px; }
+            tr td:last-child { padding-bottom: 20px; }
+        } 
+    }
+}

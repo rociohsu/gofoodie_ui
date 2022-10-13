@@ -1,0 +1,101 @@
+@charset "utf-8";
+/* 頁首 */
+nav.tabs.store a.current {
+  color: #002f75;
+}
+nav.tabs.store a.current::after {
+  background: #002f75;
+}
+nav.tabs.order a.current {
+  color: #00935f;
+}
+nav.tabs.order a.current::after {
+  background: #00935f;
+}
+/* 自動搜尋地址及定位 */
+.autocomplete > div > p.label {
+  color: #00935f;
+}
+.autocomplete > div > p.label::before {
+  background: #00935f;
+}
+.autocomplete.gps_click > div > p.label {
+  color: #002f75;
+}
+.autocomplete.gps_click > div > p.label::before {
+  background: #002f75;
+}
+/* 頁尾 */
+.bottom_navigation {
+  background: #002f75;
+}
+.bottom_navigation a {
+  color: #F3F3F3;
+}
+.bottom_navigation a i::before {
+  color: #F3F3F3;
+}
+.bottom_navigation a.current {
+  background: #04224f;
+}
+/* banner */
+.banner .owl-dots .owl-dot.active span,
+.banner .owl-dots .owl-dot:hover span {
+  background: #00935f;
+}
+/* 大圖列表 */
+.storelist > a .cover time {
+  background: #002f75;
+}
+.iconbar .pick i.icon_freight {
+  background: #04224f;
+}
+.iconbar .pick i.icon_hospital {
+  background: #00935f;
+}
+/* 店家資訊 */
+.storeinfo .cover time {
+  background: #002f75;
+}
+.hot_sale .item .rank {
+  background: #002f75;
+}
+.order_btn > a {
+  color: #04224f;
+  border-color: #04224f;
+}
+/* 訂單列表 */
+.storelist.image_s.order > a .pick_number.hospital {
+  background: #00935f;
+}
+.storelist.image_s.order > a .pick_number.freight {
+  background: #04224f;
+}
+/* 訂單詳情 */
+.order_detail .pick_number.hospital {
+  background: #00935f;
+}
+.order_detail .pick_number.freight {
+  background: #04224f;
+}
+/* 訂單狀態 */
+.order_status > span.active {
+  color: #002f75;
+}
+.order_status > span.active::after {
+  background: #002f75;
+}
+.order_status.end:not(.cancel) {
+  color: #002f75;
+}
+.order_status.end:not(.cancel)::before {
+  background: #002f75;
+}
+/* 推播通知 */
+.pushlist .group .headpic {
+  background: #002f75;
+}
+/* 置底圖 */
+.notify_fixed.staff_binding {
+  background: #34A853;
+}

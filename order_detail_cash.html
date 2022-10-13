@@ -1,0 +1,215 @@
+
+<html lang="zh-Hant">
+
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,shrink-to-fit=no">
+    <meta http-equiv="content-language" content="zh-Hant-TW">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    
+    <title>GoFoodie 美食快一點! 辦公室美食外送</title>
+    <meta name="keywords" content="GoFoodie 美食快一點! 辦公室美食外送">
+    <meta name="description" content="GoFoodie 美食快一點! 辦公室美食外送">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/standard.css">
+    <link rel="stylesheet" href="css/theme_default.css">
+    </head>
+    
+    <body>
+        
+    <header>
+            <a class="logo" href="index.html"><img src="images/logo_gofoodie.jpg"></a>
+    
+            <div class="titlebar">
+                <div class="container">
+                    <a href="order.html"><i class="icon-arrow-left"></i></a> 訂單編號：000012345
+                </div>
+            </div>
+    </header>
+    
+    <main>
+        
+        <!-- 現場付款或線上付款已完成時顯示 -->
+        <section class="order_detail">
+            <div class="container flex_center">
+                <div class="pick_number">自取<br>取餐編號<b>1</b></div>
+                <div class="info">
+                    <div class="name">快一點飲料店</div>
+                    <div class="time">下單時間：2020-01-03 12:00<br>取餐時間：2020-01-03 12:00</div>
+                </div>
+                <div class="alert">/ 請告知店家取餐編號取餐 /</div>
+            </div>
+        </section>
+    
+        <!-- 訂單狀態有流程時 -->
+        <section class="order_detail">
+            <div class="container">
+                <div class="title">訂單狀態</div>
+                <div class="order_status">
+                    <span>等待接單</span><!-- 等待接單：現場付款+手動接單時才出現 -->
+                    <span class="active">店家已接單</span>
+                    <!-- <span>餐點完成</span>
+                    <span>媒合司機中</span>
+                    <span>司機取餐中</span>
+                    <span>司機取消物流</span>
+                    <span>司機送餐中</span>
+                    <span>成功送達</span> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 訂單狀態只有一個時：現場付款+自動接單 or 訂單取消 -->
+        <section class="order_detail" style="display: none;">
+            <div class="container">
+                <div class="title">訂單狀態 
+                    <span class="order_status end">店家已接單</span>
+                    <span class="order_status end cancel">訂單已取消</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 現場付款未付款 or 線上付款已付款後再顯示 -->
+        <section class="order_detail">
+            <div class="container">
+                <div class="title">付款狀態
+                    <div class="iconbar">
+                        <div class="pay">
+                            <b>未付款</b>
+                            <i class="icon_cash"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="order_detail">
+            <div class="container">
+                <div class="title">訂購明細
+                    <div class="total">總計 $<b>300</b></div>
+                </div>
+                
+                <table class="order_detail_list">
+                    <tr>
+                        <th>商品</th>
+                        <th>數量</th>
+                        <th>卡路里</th>
+                        <th>小計</th>
+                    </tr>
+                    <tr>
+                        <td>綠茶(芋圓 $5/小杯)</td>
+                        <td>1</td>
+                        <td>500</td>
+                        <td>$<b>15</b></td>
+                    </tr>
+                    <tr>
+                        <td>紅茶(芋圓 $5(三倍 $5)/大杯 $10)</td>
+                        <td>1</td>
+                        <td>500</td>
+                        <td>$<b>70</b></td>
+                    </tr>
+                </table>
+                
+                <ul class="calculate">
+                    <!-- 整單加購 -->
+                    <li class="calculate_list">
+                        <span>塑膠袋1個</span>
+                        <span class="price">$<b>3</b></span>
+                    </li>
+                    <li class="calculate_list">
+                        <span>服務費(10%)</span>
+                        <span class="price">$<b>100</b></span>
+                    </li>
+
+                    <li class="calculate_list">
+                        <span>外送費用</span>
+                        <span class="price">$<b>80</b></span>
+                    </li>
+
+                    <li class="calculate_list discount">
+                        <span>店家負擔外送費用</span>
+                        <span class="price">-$<b>80</b></span>
+                    </li>
+
+                    <li class="calculate_list discount">
+                        <span>滿$1000折扣</span>
+                        <span class="price">-$<b>100</b></span>
+                    </li>
+
+                    <li class="calculate_list discount">
+                        <span><i class="icon-point">$</i>快金折抵</span>
+                        <span class="price">-$<b>1</b></span>
+                    </li>
+
+                    <li class="calculate_list discount">
+                        <span><i class="icon-coupon"></i>優惠券折抵</span>
+                        <span class="price">-$<b>1</b></span>
+                    </li>
+                </ul>
+                
+                <div class="totalbar">
+                    總計 <b>2</b>項 / 共 <span class="price">$<b>300</b></span>
+                    <div class="kcal">總卡路里：1000kcal</div>
+                </div>
+
+                <div class="getpoint flex_center">
+                    <i class="icon-lion"></i> 獲得商業獅點數 <b>5</b> 點
+                    <a class="search flex_center" href="setting.html">查詢 <i class="icon-arrow-right"></i></a>
+                </div>
+                
+                <p><b>備註：</b><span>清淡/不要香菜</span></p>
+            </div>
+        </section>
+        
+        <section class="order_detail">
+            <div class="container">
+                <div class="title">店家資訊</div>
+                <p><b>店家名稱：</b><span>快一點飲料店</span></p>
+                <p><b>店家地址：</b><a target="_blank" href="#"><i class="icon-location"></i>臺北市松山區民生東路三段107巷6號</a></p>
+                <p class="tel"><b>店家電話：</b><span>0987654321</span></p>
+            </div>
+        </section>
+        
+        <section class="order_detail">
+            <div class="container">
+                <div class="title">訂購資訊</div>
+                <p><b>訂購人：</b><span>許倩</span></p>
+                <p class="tel"><b>訂購人電話：</b><span>+886921185084</span></p>
+                <p><b>外送地址：</b><span>臺北市松山區民生東路三段107巷6號</span></p>
+            </div>
+        </section> 
+
+        <div class="loading_area flex_center" style="display: none;">
+            <div class="loader"></div>
+            <div>loading..</div>
+        </div>
+        
+    </main>
+    
+    <div class="notify_fixed" style="display: none;">
+        <div class="container">
+            <!-- ↓未綁定或未加入再顯示 -->
+            <!-- 綁定line notify -->
+            <a href="notify.html"><img src="images/line_notify.png"></a>
+            <!-- 加店家line好友 -->
+            <!-- <a href="#"><img src="images/line_addfriend.png"></a> -->
+        </div>
+    </div>
+        
+    <div class="bottom_navigation flex_center">
+        <div class="container flex_center">
+            <a href="index.html"><i class="icon-delivery"></i>外送</a>
+            <a href="selfpick.html"><i class="icon-bag"></i>自取</a>
+            <a href="retail.html"><i class="icon-cart"></i>購物</a>
+            <a href="order.html" class="current"><i class="icon-order"></i>訂單</a>
+            <a href="setting.html"><i class="icon-setting"></i>設定</a>
+        </div>
+    </div>
+    
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery-migrate-3.1.0.min.js"></script>
+    <script src="js/jquery.modal.min.js"></script>
+    <script src="js/layout.js"></script>
+    </body>
+    </html>

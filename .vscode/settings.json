@@ -1,0 +1,8 @@
+{
+    "less.compile": {
+        "compress": true, // 是否刪除多餘空白字元
+        "sourceMap": false, // 是否建立檔案目錄樹，true的話會自動生成一個 .css.map 檔案
+        "out": true, // 是否輸出css檔案，false為不輸出
+        "outExt": ".css", // 輸出檔案的字尾,預設為.css
+    }
+}

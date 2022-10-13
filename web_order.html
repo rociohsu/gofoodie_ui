@@ -1,0 +1,146 @@
+
+<html lang="zh-Hant">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,shrink-to-fit=no">
+<meta http-equiv="content-language" content="zh-Hant-TW">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+
+<title>GoFoodie 美食快一點! 辦公室美食外送</title>
+<meta name="keywords" content="GoFoodie 美食快一點! 辦公室美食外送">
+<meta name="description" content="GoFoodie 美食快一點! 辦公室美食外送">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/standard.css">
+<link rel="stylesheet" href="css/theme_default.css">
+</head>
+
+<body>
+	
+<header class="no_logo"><!-- 無logo時，加class="no_logo" -->
+	<div class="top_bar flex_center">
+        <div class="shop_name"><a href="#">快一點食堂</a></div>
+
+        <!-- 未登入狀態顯示 -->
+        <div class="open_menu" style="display: none;"><a href="login"><i class="icon-user"></i></a></div>
+
+        <!-- 已登入狀態顯示 -->
+        <div class="open_menu" onclick="$('.menu_user').fadeIn(300);"><i class="icon-user-check"></i></div>	
+	</div>
+
+	<div class="menu_user">
+        <div class="overlay_bg" onclick="$(this).closest('.menu_user').fadeOut(100);"></div>
+        <div class="menu_title">
+            <div class="user_name"><i class="icon-user-check"></i> Hi, 訪客</div>
+            <button class="close" ref="categoryList" onclick="$(this).closest('.menu_user').fadeOut(100);"><i class="icon-close"></i></button>
+        </div>
+        <div class="menu_list">
+            <a href="#"><i class="icon-food"></i> 點餐</a>
+            <a href="web_userdata.html"><i class="icon-user-edit"></i> 會員資料</a>
+            <a href="web_order.html"><i class="icon-file"></i> 訂單查詢</a>
+            <a href="#"><i class="icon-sign-out"></i> 登出</a>
+        </div>
+    </div>
+	
+	<div class="titlebar">
+		<div class="container">
+			<a href="javascript:history.back();"><i class="icon-arrow-left"></i></a> 訂單查詢
+		</div>
+	</div>
+</header>
+
+<main>    
+	<div class="storelist image_s order container flex_top flex_wrap">
+
+		<!-- 未完成線上付款時 -->
+		<a class="flex_center flex_wrap" href="web_order_detail.html">
+			<div class="pick_number none">訂單<br>尚未成立</div><!-- 訂單未成立加 class="none" -->
+			<div class="info">
+				<div class="name">益頂味肉品專門店</div>		
+				<div class="order">訂單編號 000012345<br>付款完成後將成立訂單</div>
+			</div>
+			<div class="focus">
+				<div class="price">$<b>1,250</b></div>
+				<div class="kcal">1000kcal</div>
+				<div class="status waiting">等待付款</div>
+
+				<!-- 因為付款要可以再選擇線上付款或現場付款，所以這邊不放前往付款的button，只留等待付款的狀態，引導到訂單明細頁再付款 -->
+				<button onclick="window.open('#')" style="display: none;">線上付款</button><!-- 失效後class="disabled" -->
+				<button onclick="window.open('#')" style="display: none;">現場付款</button>
+			</div>
+            <div class="iconbar">
+				<div class="pick">
+					<i class="icon_self">自</i>
+				</div>
+				<div class="pay">
+					<i class="icon_applepay"></i>
+				</div>
+            </div>
+		</a>
+		
+		<a class="flex_center flex_wrap" href="web_order_detail_finished.html">
+			<div class="pick_number">外送</div>
+			<div class="info">
+				<div class="name">快一點麵食店</div>		
+				<div class="order">訂單編號 000012345<br>取餐時間 2020-01-03 12:00</div>
+			</div>
+			<div class="focus">
+				<div class="price">$<b>200</b></div>
+				<div class="kcal">1000kcal</div>
+				<div class="status finished">已接單</div>
+			</div>
+            <div class="iconbar">
+				<div class="pick">
+					<i class="icon_delivery">送</i>
+					<!-- <i class="icon_self">自</i>
+					<i class="icon_inside">內</i> -->
+				</div>
+				<div class="pay">
+					<i class="icon_linepay"></i>
+					<!-- <i class="icon_googlepay"></i>
+					<i class="icon_applepay"></i>
+					<i class="icon_creditcard"></i>
+					<i class="icon_cash"></i> -->
+				</div>
+            </div>
+		</a>
+
+		<a class="flex_center flex_wrap" href="web_order_detail_cash.html">
+			<div class="pick_number">內用</div>
+			<div class="info">
+				<div class="name">快一點麵食店</div>		
+				<div class="order">訂單編號 000012345<br>取餐時間 2020-01-03 12:00</div>
+			</div>
+			<div class="focus">
+				<div class="price">$<b>1,250</b></div>
+				<div class="kcal">1000kcal</div>
+				<div class="status finished">已接單</div>
+			</div>
+            <div class="iconbar">
+				<div class="pick">
+					<!-- <i class="icon_delivery">送</i>
+					<i class="icon_self">自</i> -->
+					<i class="icon_inside">內</i>
+				</div>
+				<div class="pay">
+					<!-- <i class="icon_linepay"></i>
+					<i class="icon_googlepay"></i>
+					<i class="icon_applepay"></i>
+					<i class="icon_creditcard"></i> -->
+					<i class="icon_cash"></i>
+				</div>
+            </div>
+		</a>
+        
+	</div><!-- END .storelist.image_s.order -->
+</main>
+
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-migrate-3.1.0.min.js"></script>
+<script src="js/jquery.modal.min.js"></script>
+<script src="js/layout.js"></script>
+</body>
+</html>
