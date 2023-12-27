@@ -1,0 +1,151 @@
+
+<html lang="zh-Hant">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,shrink-to-fit=no">
+<meta http-equiv="content-language" content="zh-Hant-TW">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+
+<title>GoFoodie 美食快一點! 辦公室美食外送</title>
+<meta name="keywords" content="GoFoodie 美食快一點! 辦公室美食外送">
+<meta name="description" content="GoFoodie 美食快一點! 辦公室美食外送">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/standard.css">
+<link rel="stylesheet" href="css/theme_default.css">
+</head>
+
+<body>
+	
+<header class="no_logo">
+	<div class="titlebar">
+		<div class="container">
+			<a href="javascript:history.back();"><i class="icon-arrow-left"></i></a> 兌換快金
+		</div>
+	</div>
+</header>
+
+<main>
+	<div class="qcmoney">
+		<div>目前累積</div>
+		<div class="point flex_center"><i class="icon-point">$</i>515</div>
+		<time>使用期限：2021-09-03 23:59</time>
+	</div>
+
+	<nav class="tabs qcmoney">
+        <div class="container">
+            <a href="qcmoney.html" class="current">兌換快金</a>
+			<a href="qcmoney_log_exchange.html">兌換記錄</a>
+			<a href="qcmoney_log_use.html">使用記錄</a>
+        </div>
+	</nav>
+
+	<nav class="tabs qcmoney_source">
+        <div class="container">
+            <a href="qcmoney.html" class="current">商業獅點數兌換</a>
+			<a href="qcmoney_exchange.html">兌換碼兌換</a>
+        </div>
+	</nav>
+
+	<!-- 商業獅點數大於20點可兌換 -->
+	<div class="exchange container">
+		<h5>您目前有</h5>
+		商業獅點數：106
+		<div class="point lion flex_center">
+			<i class="icon-lion"></i>
+			<select id="lion_point">
+				<option selected>20</option>
+				<option>40</option>
+				<option>60</option>
+				<option>80</option>
+				<option>100</option>
+			</select>
+		</div>
+
+		<p><br></p>
+		<h5>可兌換<br><i class="icon-arrow-change"></i></h5>
+		<p><br></p>
+
+		快金
+		<div class="point flex_center">
+			<i class="icon-point">$</i>
+			<span id="qcmoney">100</span>
+		</div>
+		<a class="btn" href="#alert" rel="modal:open">我要兌換</a>
+	</div>
+
+	<div id="alert" class="modal notify">
+		<ul>
+			<li>將商業獅點數轉換成快金後，將無法返還點數，確定要兌換嗎？</li>
+			<li>
+				<a class="btn cancel" href="#" rel="modal:close">取消</a>
+				<a class="btn submit" href="#success" rel="modal:open">確定</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="success" class="modal notify">
+		<h2>兌換成功</h2>
+		<ul>
+			<li class="flex_center">商業獅點數<i class="icon-lion"></i> 20</li>
+			<li class="flex_center">已兌換快金<i class="icon-point">$</i> 100</li>
+			<li>
+				<a class="btn cancel" href="#" rel="modal:close">關閉</a>
+			</li>
+		</ul>
+	</div>
+
+	<!-- 商業獅點數小於20點無法兌換 -->
+	<div class="exchange container">
+		<h5>您目前有</h5>
+		商業獅點數：19
+		<div class="point lion flex_center disabled">
+			<i class="icon-lion"></i>
+			<input type="text" value="19" disabled />
+		</div>
+
+		<p><br></p>
+		<h5>每20點可兌換<br><i class="icon-arrow-change"></i></h5>
+		<p><br></p>
+
+		快金
+		<div class="point flex_center">
+			<i class="icon-point">$</i>
+			<span id="qcmoney">100</span>
+		</div>
+	</div>
+</main>
+
+<div class="bottom_navigation flex_center">
+	<div class="container flex_center">
+		<a href="order.html"><i class="icon-order"></i>訂單</a>
+		<a href="setting.html" class="current"><i class="icon-setting"></i>設定</a>
+	</div>
+</div>
+
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-migrate-3.1.0.min.js"></script>
+<script src="js/jquery.modal.min.js"></script>
+<script src="js/layout.js"></script>
+<script>
+$(function(){
+	
+	/* 商業獅點數換快金 切換顯示 */
+	$('#lion_point').change(function () {
+		var get_point = $( this ).val();
+		var qcmoney_set = 100;
+		$('#lion_point option:selected').each(function() {
+			get_point = $( this ).val();
+			qcmoney_set = parseInt( get_point/20 )*100;
+			$('#qcmoney').text( qcmoney_set );
+		});
+		
+	}).change();
+
+});
+</script>
+</body>
+</html>

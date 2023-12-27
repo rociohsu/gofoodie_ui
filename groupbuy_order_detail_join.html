@@ -1,0 +1,101 @@
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,shrink-to-fit=no">
+<meta http-equiv="content-language" content="zh-Hant-TW">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+
+<title>GoFoodie 美食快一點! 辦公室美食外送</title>
+<meta name="keywords" content="GoFoodie 美食快一點! 辦公室美食外送">
+<meta name="description" content="GoFoodie 美食快一點! 辦公室美食外送">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/standard.css">
+<link rel="stylesheet" href="css/theme_default.css">
+</head>
+
+<body>
+
+<header class="no_logo"><!-- 無logo時，加class="no_logo" -->
+    <div class="titlebar">
+        <div class="container">
+            <a href="javascript:history.back();"><i class="icon-arrow-left"></i></a>
+            <div class="iconbar">
+				<div class="groupbuy">
+					<i class="icon-groupbuy"></i>揪團一起點
+				</div>
+            </div>
+            團訂編號：000012345
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- 未完成線上付款時顯示 -->
+    <section class="order_detail">
+        <div class="container flex_center">
+            <div class="pick_number none">已開團<br>未下單</div><!-- 訂單未成立加 class="none" -->
+            <div class="info">
+                <div class="name">快一點飲料店</div>
+                <div class="time">開團時間：2020-01-03 12:00</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 訂單狀態有流程時 -->
+    <section class="order_detail">
+        <div class="container">
+            <div class="title">訂單狀態</div>
+            <div class="order_status">
+                <span class="active">已開團</span>
+                <span>收單截止</span>
+                <span>已付款</span>
+                <span>店家已接單</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 揪團一起點, 未收單截止前顯示 -->
+    <section class="order_detail">
+        <div class="container">
+            <div class="payment flex_center">
+                <button type="button" class="gotopay" onclick="window.open('#')">前往下單</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 揪團一起點, 分享連結 -->
+	<section class="order_detail groupbuy">
+		<div class="title">分享連結給你身邊的人<br>立刻一起點！<br>好東西一起分享y（^ヮ^）y</div>
+		<div class="copy_link">
+			<input type="text" name="" value="https://www.quickclick.cc/quickclick5484w_ewoiewjoe-wkopekwe">
+			<button class="btn_yello" type="button">複製連結</button>
+		</div>
+		<div class="qrcode_img">
+			<img src="images/KLEXNLURK2.png" alt="">
+		</div>	
+    </section>
+
+    <div class="loading_area flex_center" style="display: none;">
+        <div class="loader"></div>
+        <div>loading..</div>
+    </div>
+</main>
+
+<footer>
+	<div class="bottom_navigation flex_center">
+		<div class="container flex_center">
+			<a class="current" href="groupbuy_order.html"><i class="icon-order"></i>訂單</a>
+			<a href="setting.html"><i class="icon-setting"></i>設定</a>
+		</div>
+	</div>
+</footer>
+
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-migrate-3.1.0.min.js"></script>
+<script src="js/jquery.modal.min.js"></script>
+<script src="js/layout.js"></script>
+</body>
+</html>

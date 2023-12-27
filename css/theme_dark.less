@@ -1,0 +1,160 @@
+@charset "utf-8";
+
+// color
+@color-cisbase: #be9739;
+@color-white: #FFF;
+@color-black: #000;
+@color-normal: #3f3624;
+@color-dark: #312a18;
+@color-darker: #231e11;
+@color-darkist: #171717;
+@color-light: #887c5b;
+@color-important: #CB5A4B;
+
+// img url
+@url: "../images/svg";
+
+/* CSS Document */
+body { background: @color-darkist; }
+body, h1, h2, h3, h4, h5, h6, p, a, select, input, textarea, button { color: @color-white; }
+
+/*webkit瀏覽器專用*/
+* ::-webkit-input-placeholder { color: @color-light; }
+/*Firefox 4-18瀏覽器專用*/
+* input::-moz-placeholder { color: @color-light; }
+/*Firefox 19+瀏覽器專用*/
+* input::-moz-placeholder{ color: @color-light; }
+/*IE10瀏覽器專用*/
+*:-ms-input-placeholder{ color: @color-light; }
+
+/* jQuery Modal*/
+.modal { box-shadow: 0 0 10px @color-black; }
+
+/* 頁首 */
+header { background: @color-darkist; }
+nav.tabs { border-color: @color-light; background: @color-darkist; }
+nav.tabs.store a { color: @color-cisbase; }
+nav.tabs.store a.current { color: @color-cisbase; }
+nav.tabs.store a.current::after { background: @color-cisbase; }
+nav.tabs.order a.current { color: @color-cisbase; }
+nav.tabs.order a.current::after { background: @color-cisbase; }
+.searchbar > .container { background: @color-darkist; border-color: @color-light; }
+.searchbar_box { border-color: @color-light; }
+.searchbar_box input[type=text] { border-color: @color-light; }
+.searchbar_box .icon-search::before { color: @color-light; }
+.searchbar_box .icon-gps::before { color: @color-white; }
+.selectbar { border-color: @color-light !important; }
+.selectbar select { color: @color-white; border-color: @color-light; background: @color-darkist url("@{url}/arrow-down-white.svg") no-repeat 95% center; }
+.titlebar { color: @color-darker; background: @color-light; }
+.titlebar i { color: @color-darker; }
+
+/* 自動搜尋地址及定位 */
+.autocomplete { background: @color-black; border-color: @color-normal; }
+.autocomplete > div > p:nth-child(1)::before { color: @color-cisbase; }
+.autocomplete > div > p:nth-child(2) { color: @color-light; }
+.autocomplete > div > p.label { color: @color-cisbase; }
+.autocomplete > div > p.label::before { color: @color-black; background: @color-cisbase; }
+.autocomplete > div.selected { background: @color-darker; }
+.autocomplete.gps_click > div > p.label { color: @color-important; }
+.autocomplete.gps_click > div > p.label::before { background: @color-important; }
+
+/* 頁尾 */
+.bottom_navigation { background: @color-light; }
+.bottom_navigation a { color: @color-darker; }
+.bottom_navigation a i::before { color: @color-darker; }
+.bottom_navigation a.current, .bottom_navigation a.current i::before { color: @color-black; }
+.bottom_navigation a.current { background: @color-cisbase; }
+
+/* banner */
+.banner .owl-dots .owl-dot span { background: @color-light; }
+.banner .owl-dots .owl-dot.active span, .banner .owl-dots .owl-dot:hover span { background: @color-cisbase; }
+
+/* 大圖列表 */
+.storelist > a .cover time { background: @color-cisbase; }
+.storelist > a { border-color: @color-normal; }
+.storelist > a .info .km { color: @color-light; }
+.storelist > a .info .add { color: @color-light; }
+.iconbar .pay i { border-color: @color-normal; }
+.iconbar .pay i.icon_linepay { background: @color-normal url("@{url}/linepay-white.svg") no-repeat center; background-size: 82%; }
+.iconbar .pay i.icon_googlepay { background: @color-normal url("@{url}/googlepay-white.svg") no-repeat center; background-size: 78%; }
+.iconbar .pay i.icon_applepay { background: @color-normal url("@{url}/applepay-white.svg") no-repeat center; background-size: 78%; }
+.iconbar .pay i.icon_creditcard { background: @color-normal url("@{url}/creditcard-white.svg") no-repeat center; background-size: 100%; }
+.iconbar .pay i.icon_cash { background: @color-normal url("@{url}/cash-white.svg") no-repeat center; background-size: 78%; }
+
+/* 店家資訊 */
+.storeinfo .cover time { background: @color-cisbase; }
+.storeinfo .comment { color: @color-light; }
+.storeinfo .focus .status { color: @color-light; }
+.storeinfo .share { color: @color-white; background: @color-darkist; border-color: @color-white; }
+.storeinfo .share .icon-share::before { color: @color-white; }
+.storeinfo .info { border-color: @color-normal; }
+.storeinfo .tel { color: @color-light; }
+.storeinfo .biz_hours { color: @color-light; }
+.storeinfo .iconbar { color: @color-light; }
+.storeinfo .table_number { border-color: @color-normal; }
+.hot_sale { border-color: @color-normal; }
+.hot_sale .item .rank { background: @color-cisbase; }
+.order_btn { background: @color-darkist; }
+.order_btn > a { color: @color-cisbase; border-color: @color-cisbase; background: @color-darkist; }
+.sharebox .btn { color: @color-darker; }
+.sharebox .btn > i { color: @color-darker; }
+
+/* 訂單列表 */
+.storelist.image_s.order > a .info .order { color: @color-light; }
+
+/* 訂單詳情 */
+.order_detail .container { border-color: @color-normal; }
+.order_detail .pick_number { color: @color-black; }
+.order_detail .time { color: @color-light; }
+.order_detail .title { color: @color-light; }
+.order_detail .title .total { color: @color-white; }
+.order_detail .container > p { color: @color-light; }
+
+/* 訂單狀態 */
+.order_status > span { color: @color-light; }
+.order_status > span::before { border-color: @color-light; }
+.order_status > span::after { background: @color-light; }
+.order_status > span.active { color: @color-cisbase; }
+.order_status > span.active::after { background: @color-cisbase; }
+.order_status.end:not(.cancel) { color: @color-cisbase; }
+.order_status.end:not(.cancel)::before { background: @color-cisbase; }
+
+/* 訂購明細 */
+.order_detail_list { border-color: @color-light; }
+.order_detail_list th { color: @color-light; border-color: @color-light; }
+
+/* 找不到符合的店家 search_notefound */
+.page_notfound { color: @color-light; }
+.page_notfound .icon-notfound { background: url("@{url}/notfound-be9739.svg") no-repeat center bottom; }
+
+/* 設定選單 */
+.setting_menu > a i::before { color: @color-light; }
+
+/* 通知設定 */
+.notify ul li.text_s { color: @color-light; }
+
+/* 會員資料 */
+.userdata .row:not(.address_set) { border-color: @color-normal; }
+.userdata .row span { color: @color-light; }
+.userdata .row .address { border-color: @color-normal; }
+.userdata .row .address .delete .icon-delete { background: @color-dark; }
+.userdata .row .address .delete .icon-delete::before { color: @color-light; }
+.userdata .row .address a .icon_edit { background-image: url("@{url}/more-be9739.svg"); }
+.userdata_edit .limit_num { color: @color-light; }
+.userdata_edit .text_box { background: @color-darkist; border-color: @color-light; }
+.userdata_edit .text_box input[type=tel]:disabled { color: @color-light; -webkit-text-fill-color: @color-light; }
+.userdata_edit .text_box .country_code { border-color: @color-light; }
+.userdata_edit .text_box .verify_code { border-color: @color-light; }
+.userdata_edit .text_box button i.icon-delete { background: @color-dark; }
+.userdata_edit .text_box button i.icon-delete::before { color: @color-light; }
+.userdata_edit .sent { color: @color-black; background: @color-light; }
+.userdata_edit .verify .attetion { color: @color-light; }
+.userdata_edit select { border-color: @color-light; background: @color-darkist url("@{url}/arrow-down-white.svg") no-repeat 95% center; }
+.userdata_edit .error { color: @color-light; }
+
+/* 推播通知 */
+.pushlist .group .headpic { background: @color-cisbase; }
+.pushlist .group .from { color: @color-light; }
+.pushlist .group .message { color: @color-white; background: @color-black; }
+.pushlist .group .message::before { border-color: transparent @color-black; }
+.pushlist .group time { color: @color-light; }

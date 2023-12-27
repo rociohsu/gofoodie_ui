@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+// color
+@color-cisbase: #0166b8;
+@color-cisother: #fef007;
+@color-dark: #0166b8;
+@color-lightist: #F3F3F3;
+
+/* 頁首 */
+nav.tabs.store a.current { color: @color-cisbase; }
+nav.tabs.store a.current::after { background: @color-cisbase; }
+nav.tabs.order a.current { color: @color-cisbase; }
+nav.tabs.order a.current::after { background: @color-cisbase; }
+
+/* 自動搜尋地址及定位 */
+.autocomplete > div > p.label { color: @color-cisbase; }
+.autocomplete > div > p.label::before { background: @color-cisbase; }
+.autocomplete.gps_click > div > p.label { color: @color-cisbase; }
+.autocomplete.gps_click > div > p.label::before { background: @color-cisbase; }
+
+/* 頁尾 */
+.bottom_navigation { background: @color-cisother; }
+.bottom_navigation a { color: @color-cisbase; }
+.bottom_navigation a i::before { color: @color-cisbase; }
+.bottom_navigation a.current { color: @color-cisother; background: @color-dark; }
+.bottom_navigation a.current i::before { color: @color-cisother; }
+
+/* banner */
+.banner .owl-dots .owl-dot.active span, .banner .owl-dots .owl-dot:hover span { background: @color-cisbase; }
+
+/* 大圖列表 */
+.storelist > a .cover time { background: @color-cisbase; }
+
+/* 店家資訊 */
+.storeinfo .cover time { background: @color-cisbase; }
+.hot_sale .item .rank { color: @color-cisbase; background: @color-cisother; }
+.order_btn > a { color: @color-dark; border-color: @color-cisother; background: @color-cisother; }
+
+/* 訂單狀態 */
+.order_status > span.active { color: @color-cisbase; }
+.order_status > span.active::after { background: @color-cisbase; }
+.order_status.end:not(.cancel) { color: @color-cisbase; }
+.order_status.end:not(.cancel)::before { background: @color-cisbase; }
+
+/* 推播通知 */
+.pushlist .group .headpic { background: @color-cisbase; }

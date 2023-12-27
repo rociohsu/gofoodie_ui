@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* 頁首 */
+nav.tabs.store a.current {
+  color: #eb5409;
+}
+nav.tabs.store a.current::after {
+  background: #eb5409;
+}
+nav.tabs.order a.current {
+  color: #143852;
+}
+nav.tabs.order a.current::after {
+  background: #143852;
+}
+/* 自動搜尋地址及定位 */
+.autocomplete > div > p.label {
+  color: #143852;
+}
+.autocomplete > div > p.label::before {
+  background: #143852;
+}
+.autocomplete.gps_click > div > p.label {
+  color: #eb5409;
+}
+.autocomplete.gps_click > div > p.label::before {
+  background: #eb5409;
+}
+/* 頁尾 */
+.bottom_navigation {
+  background: #eb5409;
+}
+.bottom_navigation a {
+  color: #F3F3F3;
+}
+.bottom_navigation a i::before {
+  color: #F3F3F3;
+}
+.bottom_navigation a.current {
+  background: #d34901;
+}
+/* banner */
+.banner .owl-dots .owl-dot.active span,
+.banner .owl-dots .owl-dot:hover span {
+  background: #eb5409;
+}
+/* 大圖列表 */
+.storelist > a .cover time {
+  background: #eb5409;
+}
+/* 店家資訊 */
+.storeinfo .cover time {
+  background: #eb5409;
+}
+.hot_sale .item .rank {
+  background: #eb5409;
+}
+.order_btn > a {
+  color: #d34901;
+  border-color: #d34901;
+}
+/* 訂單狀態 */
+.order_status > span.active {
+  color: #eb5409;
+}
+.order_status > span.active::after {
+  background: #eb5409;
+}
+.order_status.end:not(.cancel) {
+  color: #eb5409;
+}
+.order_status.end:not(.cancel)::before {
+  background: #eb5409;
+}
+/* 推播通知 */
+.pushlist .group .headpic {
+  background: #eb5409;
+}

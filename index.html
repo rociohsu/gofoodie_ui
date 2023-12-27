@@ -1,0 +1,240 @@
+
+<html lang="zh-Hant">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,shrink-to-fit=no">
+<meta http-equiv="content-language" content="zh-Hant-TW">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+
+<title>GoFoodie 美食快一點! 辦公室美食外送</title>
+<meta name="keywords" content="GoFoodie 美食快一點! 辦公室美食外送">
+<meta name="description" content="GoFoodie 美食快一點! 辦公室美食外送">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/standard.css">
+<link rel="stylesheet" href="css/theme_default.css">
+</head>
+
+<body>
+	
+<header>
+    <a class="logo" href="index.html"><img src="images/logo_quickclick.png"></a>
+
+	<div class="searchbar">
+		<div class="container flex_center">
+			<div class="selectbar">
+				<div class="container">
+					<select class="select_sort">
+						<option value="search_location" selected>搜尋地址</option>
+						<option value="search_storename">搜尋店名</option>
+					</select>
+				</div>
+			</div>
+			<div class="searchbar_box flex_center">
+				<div class="search_location">
+					<input class="search_text" type="text" placeholder="你的位置">
+					<button class="gps_btn"><i class="icon-gps"></i><div class="loader" style="display: none;"></div></button>
+				</div>
+				<div class="search_storename" style="display: none;">
+					<input class="search_text" type="text" placeholder="店家名稱">
+					<button onclick="javascript:location.href='search_notfound.html'"><i class="icon-search"></i></button>
+				</div>
+			</div>
+		</div>
+
+		<div class="autocomplete gps_click" style="display: none;">
+			<div class="group">
+				<p class="label">我們無法定位至你目前的位置，請確認你的網路連線以及是否有授權給我們位置資訊。</p>
+			</div>
+		</div>
+
+		<div class="autocomplete search_focus" style="display: none;">
+			<div class="group">
+				<p class="label">地址請輸入至號</p>
+			</div>
+			<div class="selected">
+				<p>台北市</p>
+				<p>台灣</p>
+			</div>
+			<div>
+                <p>中正區</p>
+				<p>台灣台北市</p>
+			</div>
+			<div>
+				<p>中山區</p>
+				<p>台灣台北市</p>
+			</div>
+			<div>
+				<p>板橋區</p>
+				<p>台灣新北市</p>
+			</div>
+			<div>
+				<p>大安區</p>
+				<p>台灣台北市</p>
+			</div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="banner owl-carousel owl-theme">
+		<div class="item"><a href="#"><img src="images/banner3.jpg"></a></div>
+        <div class="item"><a href="#"><img src="images/banner1.jpg"></a></div>
+        <div class="item"><a href="#"><img src="images/banner2.jpg"></a></div>
+    </div>
+    
+    <nav class="tabs store">
+        <div class="container">
+            <a href="#" class="current">全部</a>
+            <a href="#">早餐</a>
+			<a href="#">飲料</a>
+			<a href="#">便當</a>
+			<a href="#">麵包店</a>
+			<a href="#">速食店</a>
+		</div>
+	</nav>
+	
+	<div class="filterbar">
+		<div class="container flex_center">
+			<select class="sort">
+				<option selected>預設排序</option>
+				<option>平均消費：由低至高</option>
+				<option>平均消費：由高至低</option>
+				<option>自取時間：由快至慢</option>
+				<option>自取時間：由慢至快</option>
+				<option>外送時間：由快至慢</option>
+				<option>外送時間：由慢至快</option>
+			</select>
+			<div class="filter" onclick="$('.filterbox').toggle();">篩選</div>
+			<div class="filterbox">
+				<div class="flex_center">
+					平均消費：<input type="number" placeholder="0"> - <input type="number" placeholder="200"> 元
+				</div>
+				<div class="flex_center">
+					<button class="filterbtn close" type="button" onclick="$('.filterbox').hide();">關閉</button>
+					<button class="filterbtn" type="button">送出篩選</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="storelist container flex_top flex_wrap">
+		
+		<a class="flex_top flex_wrap" href="store.html">
+			<div class="cover">
+				<img src="images/cover.jpg">
+				<div class="preparation">
+					<time class="delivery">外送<b>60</b>分鐘</time>
+					<time class="self">自取<b>30</b>分鐘</time>
+				</div>
+			</div>
+			<div class="info">
+				<div class="name">快一點麵食店 <span class="km">(3.5km)</span></div>
+				<div class="price_range">平均消費：100 - 200元</div>
+				<div class="add">台北市松山區民生東路3段107巷6號2樓B區</div>
+			</div>
+			<div class="focus">
+				<div class="comment"><i class="icon-star"></i> 4.5</div>
+				<div class="status">營業中</div>
+			</div>
+			<div class="iconbar">
+				<div class="pick">
+					<i class="icon_delivery">送</i>
+					<i class="icon_self">自</i>
+					<i class="icon_inside">內</i>
+				</div>
+				<div class="pay">
+					<i class="icon_cash"></i>
+					<i class="icon_creditcard"></i>
+					<i class="icon_applepay"></i>
+					<i class="icon_googlepay"></i>
+					<i class="icon_linepay"></i>
+					<i class="icon_easywallet"></i>
+					<i class="icon_jkopay"></i>
+					<i class="icon_taiwanpay"></i>
+				</div>
+			</div>
+		</a>
+
+		<a class="flex_top flex_wrap" href="store.html">
+			<div class="cover">
+				<img src="images/cover.jpg">
+				<div class="cover_mask flex_center">暫不供應</div><!-- 暫不供應的圖片加遮罩 -->
+				<time class="visible_hide"><b>30</b>分鐘</time><!-- 外送時間隱藏 -->
+			</div>
+			<div class="info">
+				<div class="name">快一點麵食店 <span class="km">(3.5km)</span></div>
+				<div class="price_range">平均消費：100 - 200元</div>	
+				<div class="add">台北市松山區民生東路3段107巷6號2樓B區</div>
+			</div>
+			<div class="focus">
+				<div class="comment"><i class="icon-star"></i> 4.5</div>
+				<div class="status stop-open visible_hide">暫不供應</div><!-- 重複狀態可先隱藏 -->
+			</div>
+			<div class="iconbar">
+				<div class="pick">
+					<i class="icon_delivery">送</i>
+					<i class="icon_self">自</i>
+					<i class="icon_inside">內</i>
+				</div>
+				<div class="pay">
+					<i class="icon_cash"></i>
+					<i class="icon_creditcard"></i>
+					<i class="icon_applepay"></i>
+					<i class="icon_googlepay"></i>
+				</div>
+			</div>
+		</a>
+
+		<a class="flex_top flex_wrap" href="store.html">
+			<div class="cover">
+				<img src="images/cover.jpg">
+				<time><b>30</b>分鐘</time>
+			</div>
+			<div class="info">
+				<div class="name">快一點麵食店 <span class="km">(3.5km)</span></div>		
+				<div class="add">台北市松山區民生東路3段107巷6號2樓B區</div>
+			</div>
+			<div class="focus">
+				<div class="comment"><i class="icon-star"></i> 4.5</div>
+				<div class="status pre-order">僅供預約</div>
+			</div>
+			<div class="iconbar">
+				<div class="pick">
+					<i class="icon_delivery">送</i>
+					<i class="icon_self">自</i>
+					<i class="icon_inside">內</i>
+				</div>
+				<div class="pay">
+					<i class="icon_cash"></i>
+					<i class="icon_creditcard"></i>
+					<i class="icon_applepay"></i>
+					<i class="icon_googlepay"></i>
+					<i class="icon_linepay"></i>
+				</div>
+			</div>
+		</a>
+
+	</div><!-- END .storelist -->
+</main>
+
+<div class="bottom_navigation flex_center">
+	<div class="container flex_center">
+		<a href="index.html" class="current"><i class="icon-delivery"></i>外送</a>
+		<a href="selfpick.html"><i class="icon-bag"></i>自取</a>
+		<a href="retail.html"><i class="icon-cart"></i>購物</a>
+		<a href="order.html"><i class="icon-order"></i>訂單</a>
+		<a href="setting.html"><i class="icon-setting"></i>設定</a>
+	</div>
+</div>
+
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-migrate-3.1.0.min.js"></script>
+<script src="js/jquery.modal.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/layout.js"></script>
+</body>
+</html>
