@@ -613,6 +613,8 @@ i.icon-pickup::before { display: none; }
 .notify_fixed.member_push { background: @color-self; }
 footer .notify_fixed { position: relative; bottom: 0; }
 .notify_fixed img { width: 100%; height: auto; }
+.notify_fixed.ad_bottom0 .pc { display: block; }
+.notify_fixed.ad_bottom0 .mobile { display: none; }
 
 /* 找不到符合的店家 search_notefound */
 .page_notfound .icon-notfound { width: 200px; height: 200px; margin: 10px auto; background: url("@{url}/notfound.svg") no-repeat center bottom; background-size: 80%; }
@@ -989,6 +991,8 @@ footer .notify_fixed { position: relative; bottom: 0; }
     /* 置底圖 */
     .notify_fixed { bottom: 70px; }
 	.notify_fixed img { display: block; width: auto; height: 80px; margin: 0 auto; }
+	.notify_fixed.ad_bottom0 .pc { display: none; }
+	.notify_fixed.ad_bottom0 .mobile { display: block; }
 	
 	/* 推播通知 */
 	.pushlist .group .headpic { width: 51px; height: 51px; margin-right: 19px; line-height: 51px; }
